@@ -54,7 +54,7 @@ let g:NERDTreeWinSize=35
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': '16color',
+      \ 'colorscheme': 'powerlineish',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'filename', 'modified'] ],
