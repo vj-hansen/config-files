@@ -1,6 +1,8 @@
 set number
 set expandtab
 set showcmd
+set cursorcolumn
+set cursorline
 set noswapfile
 set autoread
 set ruler
@@ -12,20 +14,17 @@ set t_vb=
 set tm=500
 set laststatus=2
 
+syntax enable
 filetype on
 filetype plugin on
 
-colorscheme lunaperche
-
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+colorscheme default
 
 " VimPlug: https://github.com/junegunn/vim-plug
 call plug#begin()
 Plug 'preservim/NERDTree'
 Plug 'airblade/vim-gitgutter'
-Plug 'lurst/austere.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'rust-lang/rust.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'w0rp/ale'
 Plug 'valloric/youcompleteme'
@@ -33,10 +32,11 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " Ale
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
+
 
 " Jedi
 let g:jedi#auto_vim_configuration = 0
@@ -54,7 +54,7 @@ let g:NERDTreeWinSize=35
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'powerlineish',
+      \ 'colorscheme': 'Tomorrow_Night_Blue',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'filename', 'modified'] ],
@@ -72,4 +72,5 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
-" colorscheme austere
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
