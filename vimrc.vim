@@ -13,12 +13,15 @@ set novisualbell
 set t_vb=
 set tm=500
 set laststatus=2
+set showmode
+set nowrap
+
 
 syntax enable
 filetype on
 filetype plugin on
 
-colorscheme default
+colorscheme habamax
 
 " VimPlug: https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -29,6 +32,8 @@ Plug 'davidhalter/jedi-vim'
 Plug 'w0rp/ale'
 Plug 'valloric/youcompleteme'
 Plug 'itchyny/lightline.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'ambv/black'
 call plug#end()
 
 " Ale
@@ -54,7 +59,7 @@ let g:NERDTreeWinSize=35
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night_Blue',
+      \ 'colorscheme': 'landscape',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'filename', 'modified'] ],
