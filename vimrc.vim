@@ -21,7 +21,7 @@ syntax enable
 filetype on
 filetype plugin on
 
-colorscheme habamax
+colorscheme torte
 
 " VimPlug: https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -34,6 +34,7 @@ Plug 'valloric/youcompleteme'
 Plug 'itchyny/lightline.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'ambv/black'
+Plug 'junegunn/fzf'
 call plug#end()
 
 " Ale
@@ -41,10 +42,11 @@ let g:ale_set_highlights = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
-
+ 
+nnoremap <silent> <C-f> :FZF<CR>
 
 " Jedi
-let g:jedi#auto_vim_configuration = 0
+"let g:jedi#auto_vim_configuration = 0
 let g:jedi#goto_assignments_command = "<leader>a"
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#completions_command = "<C-Space>"
@@ -79,3 +81,4 @@ let g:lightline = {
 
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
+
