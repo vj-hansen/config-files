@@ -46,7 +46,7 @@ let g:airline#extensions#ale#enabled = 1
 nnoremap <silent> <C-f> :FZF<CR>
 
 " Jedi
-"let g:jedi#auto_vim_configuration = 0
+let g:jedi#auto_vim_configuration = 0
 let g:jedi#goto_assignments_command = "<leader>a"
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#completions_command = "<C-Space>"
@@ -81,4 +81,3 @@ let g:lightline = {
 
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
-
