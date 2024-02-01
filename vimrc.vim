@@ -16,12 +16,11 @@ set laststatus=2
 set showmode
 set nowrap
 
-
 syntax enable
 filetype on
 filetype plugin on
 
-colorscheme torte
+colorscheme industry
 
 " VimPlug: https://github.com/junegunn/vim-plug
 call plug#begin()
@@ -34,7 +33,6 @@ Plug 'valloric/youcompleteme'
 Plug 'itchyny/lightline.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'ambv/black'
-Plug 'junegunn/fzf'
 call plug#end()
 
 " Ale
@@ -43,7 +41,6 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
  
-nnoremap <silent> <C-f> :FZF<CR>
 
 " Jedi
 let g:jedi#auto_vim_configuration = 0
